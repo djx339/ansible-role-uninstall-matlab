@@ -1,0 +1,20 @@
+---
+- name: Lookup MATLAB license manager
+  shell: 'find {{ matlab_root }} -name "lmdown"'
+  register: __lmdown
+  ignore_errors: True
+
+- name: Shutdown the MATLAB license manager
+  shell: "{{ __lmdown.stdout }}"
+  when: not __lmdown|failed
+
+- name: Remove license manager files
+  shell: "rm /var/tmp/lm_TMW*"
+  when: not __lmdown|failed
+
+- name: Remove MATLAB
+  file: "dest={{ matlab_root }} state=absent"
+
+- name: Remove symlinks to MATLAB binaries
+  file: "dest={{ item }} state=absent"
+  with_items: "{{ matalb_bin_links }}"

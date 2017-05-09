@@ -1,0 +1,8 @@
+---
+# defaults file for uninstall-matlab
+matlab_root: /usr/local/MATLAB
+matlab_bin_links:
+  - /usr/local/bin/matlab
+  - /usr/local/bin/mcc
+  - /usr/local/bin/mex
+  - /usr/local/bin/mbuild
