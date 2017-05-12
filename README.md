@@ -11,7 +11,7 @@ None.
 Role Variables
 --------------
 
-`matlab_root`: The root of MATLAB. (default: /usr/local/MATLAB)
+`u_matlab_version`: The version of MATLAB. (default: R2015b)
 
 Dependencies
 ------------

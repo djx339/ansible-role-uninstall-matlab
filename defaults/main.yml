@@ -1,7 +1,9 @@
 ---
 # defaults file for uninstall-matlab
-matlab_root: /usr/local/MATLAB
-matlab_bin_links:
+u_matlab_version: R2015b
+u_matlab_root: "/usr/local/MATLAB/{{ u_matlab_version }}"
+u_matlab_lmdown: "{{ u_matlab_root }}/etc/lmdown"
+u_matlab_bin_links:
   - /usr/local/bin/matlab
   - /usr/local/bin/mcc
   - /usr/local/bin/mex
