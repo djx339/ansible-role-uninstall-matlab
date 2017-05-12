@@ -9,6 +9,7 @@
 
 - name: Remove license manager files
   shell: "rm /var/tmp/lm_TMW*"
+  ignore_errors: yes
   when: __lmdown.stat.exists is defined and __lmdown.stat.exists
 
 - name: Remove MATLAB
