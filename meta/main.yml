@@ -26,7 +26,7 @@ galaxy_info:
     - name: Alpine
       versions:
         - all
-    - name: CentOS
+    - name: EL
       versions:
         - all
    
